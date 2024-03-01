@@ -11,6 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -25,6 +27,10 @@ public:
     QWidget *centralwidget;
     QPushButton *pushButton_Register;
     QPushButton *pushButton_Login;
+    QLabel *label_name;
+    QLineEdit *lineEdit_name;
+    QLabel *label;
+    QLineEdit *lineEdit_password;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,10 +43,22 @@ public:
         centralwidget->setObjectName("centralwidget");
         pushButton_Register = new QPushButton(centralwidget);
         pushButton_Register->setObjectName("pushButton_Register");
-        pushButton_Register->setGeometry(QRect(150, 320, 100, 32));
+        pushButton_Register->setGeometry(QRect(170, 270, 100, 32));
         pushButton_Login = new QPushButton(centralwidget);
         pushButton_Login->setObjectName("pushButton_Login");
-        pushButton_Login->setGeometry(QRect(450, 340, 100, 32));
+        pushButton_Login->setGeometry(QRect(450, 260, 100, 32));
+        label_name = new QLabel(centralwidget);
+        label_name->setObjectName("label_name");
+        label_name->setGeometry(QRect(70, 70, 71, 20));
+        lineEdit_name = new QLineEdit(centralwidget);
+        lineEdit_name->setObjectName("lineEdit_name");
+        lineEdit_name->setGeometry(QRect(190, 80, 113, 21));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(70, 150, 71, 16));
+        lineEdit_password = new QLineEdit(centralwidget);
+        lineEdit_password->setObjectName("lineEdit_password");
+        lineEdit_password->setGeometry(QRect(160, 150, 113, 21));
         LoginWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LoginWindow);
         menubar->setObjectName("menubar");
@@ -60,6 +78,8 @@ public:
         LoginWindow->setWindowTitle(QCoreApplication::translate("LoginWindow", "LoginWindow", nullptr));
         pushButton_Register->setText(QCoreApplication::translate("LoginWindow", "Register ", nullptr));
         pushButton_Login->setText(QCoreApplication::translate("LoginWindow", "Login", nullptr));
+        label_name->setText(QCoreApplication::translate("LoginWindow", "Username ", nullptr));
+        label->setText(QCoreApplication::translate("LoginWindow", "Password ", nullptr));
     } // retranslateUi
 
 };
