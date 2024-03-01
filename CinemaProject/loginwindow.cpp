@@ -6,6 +6,9 @@ LoginWindow::LoginWindow(QWidget *parent)
     , ui(new Ui::LoginWindow)
 {
     ui->setupUi(this);
+    ui->label_error->setVisible(false);
+
+
 }
 
 LoginWindow::~LoginWindow()

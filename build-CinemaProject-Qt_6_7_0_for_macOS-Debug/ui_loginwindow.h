@@ -31,6 +31,7 @@ public:
     QLineEdit *lineEdit_name;
     QLabel *label;
     QLineEdit *lineEdit_password;
+    QLabel *label_error;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -60,6 +61,9 @@ public:
         lineEdit_password->setObjectName("lineEdit_password");
         lineEdit_password->setGeometry(QRect(160, 150, 113, 21));
         lineEdit_password->setEchoMode(QLineEdit::Password);
+        label_error = new QLabel(centralwidget);
+        label_error->setObjectName("label_error");
+        label_error->setGeometry(QRect(20, 210, 211, 20));
         LoginWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LoginWindow);
         menubar->setObjectName("menubar");
@@ -79,8 +83,9 @@ public:
         LoginWindow->setWindowTitle(QCoreApplication::translate("LoginWindow", "LoginWindow", nullptr));
         pushButton_Register->setText(QCoreApplication::translate("LoginWindow", "Register ", nullptr));
         pushButton_Login->setText(QCoreApplication::translate("LoginWindow", "Login", nullptr));
-        label_name->setText(QCoreApplication::translate("LoginWindow", "<html><head/><body><p><span style=\" color:#ff2600;\">Username </span></p></body></html>", nullptr));
-        label->setText(QCoreApplication::translate("LoginWindow", "<html><head/><body><p><span style=\" color:#ff2600;\">Password </span></p></body></html>", nullptr));
+        label_name->setText(QCoreApplication::translate("LoginWindow", "<html><head/><body><p><span style=\" color:#000000;\">Username </span></p></body></html>", nullptr));
+        label->setText(QCoreApplication::translate("LoginWindow", "<html><head/><body><p><span style=\" color:#000000;\">Password </span></p></body></html>", nullptr));
+        label_error->setText(QCoreApplication::translate("LoginWindow", "<html><head/><body><p><span style=\" color:#ff2600;\">Error: wrong username or password </span></p></body></html>", nullptr));
     } // retranslateUi
 
 };

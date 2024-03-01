@@ -15,6 +15,7 @@ class LoginWindow : public QMainWindow
 
 public:
     LoginWindow(QWidget *parent = nullptr);
+
     ~LoginWindow();
 
 private:
