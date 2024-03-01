@@ -49,16 +49,17 @@ public:
         pushButton_Login->setGeometry(QRect(450, 260, 100, 32));
         label_name = new QLabel(centralwidget);
         label_name->setObjectName("label_name");
-        label_name->setGeometry(QRect(70, 70, 71, 20));
+        label_name->setGeometry(QRect(60, 80, 71, 20));
         lineEdit_name = new QLineEdit(centralwidget);
         lineEdit_name->setObjectName("lineEdit_name");
-        lineEdit_name->setGeometry(QRect(190, 80, 113, 21));
+        lineEdit_name->setGeometry(QRect(150, 80, 113, 21));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(70, 150, 71, 16));
         lineEdit_password = new QLineEdit(centralwidget);
         lineEdit_password->setObjectName("lineEdit_password");
         lineEdit_password->setGeometry(QRect(160, 150, 113, 21));
+        lineEdit_password->setEchoMode(QLineEdit::Password);
         LoginWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LoginWindow);
         menubar->setObjectName("menubar");
@@ -78,8 +79,8 @@ public:
         LoginWindow->setWindowTitle(QCoreApplication::translate("LoginWindow", "LoginWindow", nullptr));
         pushButton_Register->setText(QCoreApplication::translate("LoginWindow", "Register ", nullptr));
         pushButton_Login->setText(QCoreApplication::translate("LoginWindow", "Login", nullptr));
-        label_name->setText(QCoreApplication::translate("LoginWindow", "Username ", nullptr));
-        label->setText(QCoreApplication::translate("LoginWindow", "Password ", nullptr));
+        label_name->setText(QCoreApplication::translate("LoginWindow", "<html><head/><body><p><span style=\" color:#ff2600;\">Username </span></p></body></html>", nullptr));
+        label->setText(QCoreApplication::translate("LoginWindow", "<html><head/><body><p><span style=\" color:#ff2600;\">Password </span></p></body></html>", nullptr));
     } // retranslateUi
 
 };
