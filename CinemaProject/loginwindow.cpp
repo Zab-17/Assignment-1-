@@ -47,18 +47,13 @@ void LoginWindow::on_pushButton_Login_clicked()
 
 
 
-    //LoginWindow*newname= new LoginWindow(this);
-   // newname->setvalues(ui->lineEdit_name->text());
-    //if (newname =usernames[ ]){
-     //   hide();
-      //  WelcomeWindow *WelcomeWindow= new class WelcomeWindow(this);
-     //WelcomeWindow ->show();
-
 
 
 
 void LoginWindow::on_pushButton_Register_clicked()
 {
-
+    hide();
+    WelcomeWindow *welcomeWindow = new WelcomeWindow(this);
+    welcomeWindow->show();
 }
 
