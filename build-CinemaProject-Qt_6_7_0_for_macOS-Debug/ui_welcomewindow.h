@@ -58,7 +58,7 @@ public:
         WelcomeWindow->setWindowTitle(QCoreApplication::translate("WelcomeWindow", "Dialog", nullptr));
         label_Hello->setText(QCoreApplication::translate("WelcomeWindow", "Hello", nullptr));
         pushButton_Logout->setText(QCoreApplication::translate("WelcomeWindow", "Logout ", nullptr));
-        label_image->setText(QCoreApplication::translate("WelcomeWindow", "TextLabel", nullptr));
+        label_image->setText(QString());
         label_Welcome->setText(QCoreApplication::translate("WelcomeWindow", "Welcome", nullptr));
     } // retranslateUi
 

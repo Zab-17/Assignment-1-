@@ -44,10 +44,10 @@ public:
         centralwidget->setObjectName("centralwidget");
         pushButton_Register = new QPushButton(centralwidget);
         pushButton_Register->setObjectName("pushButton_Register");
-        pushButton_Register->setGeometry(QRect(170, 270, 100, 32));
+        pushButton_Register->setGeometry(QRect(110, 270, 100, 32));
         pushButton_Login = new QPushButton(centralwidget);
         pushButton_Login->setObjectName("pushButton_Login");
-        pushButton_Login->setGeometry(QRect(450, 260, 100, 32));
+        pushButton_Login->setGeometry(QRect(300, 270, 100, 32));
         label_name = new QLabel(centralwidget);
         label_name->setObjectName("label_name");
         label_name->setGeometry(QRect(60, 80, 71, 20));
